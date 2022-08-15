@@ -5,8 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 01</title>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        function greeting() {
+            let name = prompt('Please tell me your name.');
+            console.log('Name: ' + name);
+            let age = prompt('How old are you?');
+            console.log('Age: ' + age);
+            let home = prompt('Where do you live?');
+            console.log('Home: ' + home);
+            let mood;
+            do {
+                mood = prompt('What is your mood, on a scale from 1-10? (10 being best)');
+            } while(!(mood > 0 && mood <=10));
+            console.log('Mood: ' + mood);
+            let msg = `Greetings, my good friend, ${name}! ${age} years young? Long way to go!
+            ${home} seems like a pretty nice place to live...
+            I would also rate my mood as a ${Math.ceil(mood)}.`;
+            alert(msg);
+            let block = document.getElementById('greeting');
+            block.innerHTML += msg;
+        }
+    </script>
+    <style>
+        * {
+            border: 1px darkred solid;
+            padding: 4px;
+        }
+        h1 {
+            color: darkblue;
+            background-color: palevioletred;
+        }
+        body {
+            padding: 8px;
+        }
+    </style>
 </head>
-<body>
-    
+<body onload="greeting()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./">Partner Site</a></li>
+                <li><a href="./">Somewhere Else</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Class 1 Lab</h1>
+        <section id="greeting">
+            <p style="color:darkred; background-color:green">Please tell me your name.</p>
+            <p style="color:darkgoldenrod; background-color:purple">How old are you?</p>
+            <p style="color:darkblue; background-color:orange">Where do you live?</p>
+            <p style="color:darkgrey; background-color:lightgrey">What is your mood, on a scale from 1-10? (10 being best)</p>
+            <!-- <ol>
+                <li>Please tell me your name.</li>
+                <li>How old are you?</li>
+                <li>Where do you live?</li>
+                <li>What is your mood, on a scale from 1-10? (10 being best)</li>
+            </ol> -->
+            Response:
+        </section>
+    </main>
+    <footer>
+    @julian-barker, 2022
+    </footer>
 </body>
 </html>
