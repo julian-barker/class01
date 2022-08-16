@@ -1,0 +1,11 @@
+* {
+    border: 1px darkred solid;
+    padding: 4px;
+}
+h1 {
+    color: darkblue;
+    background-color: palevioletred;
+}
+body {
+    padding: 8px;
+}

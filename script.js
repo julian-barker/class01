@@ -1,3 +1,7 @@
+function $(x) {
+  return document.getElementById(x);
+}
+
 function greeting() {
   let name = prompt('Please tell me your name.');
   console.log('Name: ' + name);
